@@ -1,0 +1,87 @@
+@import url('https://fonts.cdnfonts.com/css/code-new-roman-2');
+
+* {
+  font-family: 'Code New Roman', sans-serif;
+  color: #fff;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  background: rgb(28,17,57);
+  background: linear-gradient(90deg, rgba(28,17,57,1) 14%, rgba(9,5,17,1) 74%);
+}
+
+header.navbar-container {
+  display: flex;
+  justify-content: space-around;
+  margin: -10px;
+}
+
+header h2 {
+  font-size: 30px;
+  
+}
+
+ul#navbar-links {
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+  font-size: 18px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+ul#navbar-links:hover {
+  color: green;
+}
+
+
+section {
+  display: flex;
+  justify-content: space-between;
+}
+
+div.container-left {
+  margin-top: 30px;
+  width: 650px;
+  margin-left: 60px;
+}
+
+h1#main-text {
+
+  font-size: 40px;
+  width: 800px;
+  border-left: 4px solid rgb(149, 0, 255);
+  padding-left: 20px;
+}
+
+#main-text::after {
+  content: '|';
+  margin-left: 5px;
+  animation: blink 0.90s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+div.container-right {
+  margin-right: 60px;
+
+}
+
+div.links-container-right {
+  display: flex;  
+  justify-content: space-around;
+  width: 550px;
+
+}
+
+div.links-container-right :hover {
+  color: rgb(114, 59, 201);
+}
