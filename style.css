@@ -1,4 +1,5 @@
 @import url('https://fonts.cdnfonts.com/css/code-new-roman-2');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;700&display=swap');  
 
 * {
   font-family: 'Code New Roman', sans-serif;
@@ -49,9 +50,9 @@ div.container-left {
 
 h1#main-text {
 
-  font-size: 40px;
+  font-size: 40px;  
   width: 800px;
-  border-left: 4px solid rgb(149, 0, 255);
+  border-left: 4px solid  rgb(98, 55, 208);
   padding-left: 20px;
 }
 
@@ -70,18 +71,127 @@ h1#main-text {
   }
 }
 
+div.sub-text {
+ padding-left: 25px;
+}
+
 div.container-right {
   margin-right: 60px;
 
 }
 
 div.links-container-right {
-  display: flex;  
+  display: flex;
   justify-content: space-around;
-  width: 550px;
+  width: 450px;
+}
+
+div.links-container-right a {
+  font-size: 20px;
+  
+}
+
+div.links-container-right a:hover {
+  color: rgb(98, 55, 208);
+  
+}
+
+div.button-container {
+  width: 800px;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  margin-top: 70px;
+}
+
+div button.buttons {
+  background-color: black;
+  padding: 10px;
+}
+
+div.button-container button {
+  font-size: 30px;
+  width: 300px;
+  height: 70px;
+  background: rgb(157, 119, 253);
+  background: linear-gradient(90deg, rgb(98, 55, 208) 14%, rgb(54, 30, 106) 74%);
+  cursor: pointer;
+  border: none;
+  border-radius: 6px 6px 6px 6px;
+}
+
+div.button-container button:hover {
+  width: 310px;
+  height: 75px;
+  background-color: rgb(143, 99, 194);
+  font-size: 30px;
+  
+}
+
+div.container {
+  position: absolute;
+  background-color:#121212;
+  border-radius: 2rem 2rem 2rem 2rem;
+  padding: 30px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.859);
+  width:600px;
+  height: 500px;
+  max-width: 100%;
+  margin-left: 100px;
+  margin-top: -70px;
 
 }
 
-div.links-container-right :hover {
-  color: rgb(114, 59, 201);
+div.header {
+
+  margin-top: -35px;
+  font-size: 20px; 
+}
+
+
+form#form {
+  color: black;
+}
+
+div.form-control {
+  padding: 15px;
+  position: relative;
+  margin-left: -10px;
+}
+
+div.form-control label {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+div.form-control input {
+  background-color: #121212;
+  border: 3px solid #5b22df;
+  display: block;
+  border-radius: 2rem 2rem 2rem 2rem;
+  width: 550px;
+  padding: 7px;
+  margin-bottom: 7px;
+  font-size: 15px;
+}
+
+div.form-control i {
+  position: absolute;
+  top: 46px;
+  right: 40px;
+  visibility: hidden;
+}
+
+button#submit-gpt {
+  display: flex;
+  position: relative;
+  left: 180px;
+  top: 18px;
+  background: rgb(157, 119, 253);
+  background: linear-gradient(90deg, rgb(98, 55, 208) 14%, rgb(54, 30, 106) 74%);
+  padding: 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 2rem 2rem 2rem 2rem;
+  cursor: pointer;
 }

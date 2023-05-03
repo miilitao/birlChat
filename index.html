@@ -10,7 +10,7 @@
 </head> 
 <body>
   <header class="navbar-container">
-    <h2>Birl Chat</h2>
+    <h2>✔️ Birl Chat</h2>
     <ul id="navbar-links">
       <li><a href="#">Início</a></li>
       <li><a href="#">Sobre mim</a></li>
@@ -19,20 +19,66 @@
   </header>
   <section>
     <div class="container-left">
-        <h1 id="main-text">O Birl Chat é o seu parceiro de treino, ele não te deixa na mão e faz gratuitamente
+        <h1 id="main-text" style="display: block">O Birl Chat é o seu parceiro de treino, ele não te deixa na mão e faz gratuitamente
       a sua planilha de treinos e dieta.</h1>
       <div class="sub-text">
-         <p id="subtext">Com nosso amigo Birl Chat você pode criar um plano para suas metas nos treinos. Crie planilhas, organize sua dieta
+         <p id="subtext" style="display: block">Com o Birl você pode criar um plano para suas metas nos treinos. Crie planilhas, organize sua dieta
         e personalize-a de acordo com o seu gosto.</p>
       </div>
+      <div class="button-container">
+        <button style="display: block" id="main-button" class="main-button" type="button" onclick="hideElement()">Fazer planilha</button>
+      </div>
+      <div id="formulario" style="display: none;">
+        <div class="container">
+          <div class="header">
+            <h4>Para que o Birl funcione corretamente as informações precisam ser escritas
+              da maneira indicada dentro das caixas abaixo:
+            </h4>
+          </div>
+          <form id="form" class="form">
+
+            <div class="form-control">
+              <label for="diet">1- Qual o objetivo do seu treino e da sua dieta?</label>
+              <input id="inputs" type="text" placeholder=" Digite: 'O objetivo do meu treino e dieta é...'">
+              <i class="fas fa-exclamation-circle"></i>
+              <i class="fas fa-check-circle"></i>
+              <small>Lembre-se de escrever de acordo com os passos indicados acima.</small>
+            </div>
+            <div class="form-control">
+              <label for="diet">2- Quais são os alimentos que você mais gosta?</label>
+              <input id="foods" type="text" placeholder=" Digite: 'Eu gosto bastante de...'">
+              <i class="fas fa-exclamation-circle"></i>
+              <i class="fas fa-check-circle"></i>
+              <small>Lembre-se de escrever de acordo com os passos indicados acima.</small>
+            </div>
+            <div class="form-control">
+              <label for="diet">3- Costuma treinar ou fazer exercícios físicos?</label>
+              <input id="workout" type="text" placeholder=" Digite: 'Eu costumo treinar X vezes por semana...'">
+              <i class="fas fa-exclamation-circle"></i>
+              <i class="fas fa-check-circle"></i>
+              <small>Lembre-se de escrever de acordo com os passos indicados acima.</small>
+            </div>
+            <button id="submit-gpt">Gerar planilha com o Birl</button>
+          </form>
+        </div>
+      </div>
     </div>
+
     <div class="container-right">
           <img id="birl-image" src="images/Chat bot-pana-purple.svg" width="500" height="500" alt="Imagem do birl.ia">
-          <div class="links-container-right">
-          <a href="https://github.com/miilitao">Github</a>
-          <a href="https://www.linkedin.com/in/gabriel-milit%C3%A3o-b2b055259/">linkedin</a>
-          <a href="">Whatsapp</a>
-          </div>
+
+        <div class="links-container-right">
+          <a href="https://github.com/miilitao" class="buttons">
+            <i class="fa-brands fa-github"></i> Github
+          </a>
+          <a href="https://www.linkedin.com/in/gabriel-milit%C3%A3o-b2b055259/" class="buttons">
+            <i class="fa-brands fa-linkedin"></i> linkedin
+          </a>
+          <a href="" class="buttons">
+            <i class="fa-brands fa-whatsapp"></i> Whatsapp
+          </a>
+        </div>
+
     </div>
          
     </section>
