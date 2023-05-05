@@ -125,7 +125,68 @@ div.button-container button:hover {
   height: 75px;
   background-color: rgb(143, 99, 194);
   font-size: 30px;
-  
+}
+
+div.taxa-container {
+  position: absolute;
+  background-color:#121212;
+  border-radius: 2rem 2rem 2rem 2rem;
+  padding: 30px;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.859);
+  width:600px;
+  height: 500px;
+  max-width: 100%;
+  margin-left: 100px;
+  margin-top: -70px;
+}
+
+div.main-text {
+
+  margin-top: -35px;
+  font-size: 20px; 
+}
+
+div.basal-form-control {
+  padding: 15px;
+  position: relative;
+  margin-left: -10px;
+}
+
+div.basal-form-control label {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+div.basal-form-control input {
+  background-color: #121212;
+  border: 3px solid #5b22df;
+  display: block;
+  border-radius: 2rem 2rem 2rem 2rem;
+  width: 550px;
+  padding: 7px;
+  margin-bottom: 7px;
+  font-size: 15px;
+}
+
+div.basal-form-control  i {
+  position: absolute;
+  top: 46px;
+  right: 40px;
+  visibility: hidden;
+}
+
+button#buttonTaxaBasal {
+  display: flex;
+  position: relative;
+  left: 150px;
+  top: 18px;
+  background: rgb(157, 119, 253);
+  background: linear-gradient(90deg, rgb(98, 55, 208) 14%, rgb(54, 30, 106) 74%);
+  padding: 13px;
+  font-size: 15px;
+  border: none;
+  border-radius: 2rem 2rem 2rem 2rem;
+  cursor: pointer;
 }
 
 div.container {
@@ -139,18 +200,12 @@ div.container {
   max-width: 100%;
   margin-left: 100px;
   margin-top: -70px;
-
 }
 
 div.header {
 
   margin-top: -35px;
   font-size: 20px; 
-}
-
-
-form#form {
-  color: black;
 }
 
 div.form-control {

@@ -4,28 +4,32 @@ const MainButton = document.getElementById('main-button');
 const h1 = document.getElementById('main-text');
 const subtext = document.getElementById('subtext');
 const formulario = document.getElementById('formulario');
+const taxaMetabolicaBasal = document.getElementById('taxaMetabolicaBasal');
 
-function hideElement(){
-  if(h1.style.display === 'block'){
-    h1.style.display = 'none';
+MainButton.addEventListener('click', () => {
+  hideElement(h1, subtext, MainButton);
+  mostrarInput(taxaMetabolicaBasal);
+})
+
+function hideElement(text, subtext, button){
+  if(text.style.display === 'block'){
+    text.style.display = 'none';
   } else {
-    h1.style.display = 'block'
+    text.style.display = 'block'
   } 
   if(subtext.style.display === 'block'){
     subtext.style.display = 'none'
   } else {
     subtext.style.display = 'block'
   }
-  if(MainButton.style.display === 'block'){
-    MainButton.style.display = 'none'
+  if(button.style.display === 'block'){
+    button.style.display = 'none'
   } else {
-    MainButton.style.display = 'none';
+    button.style.display = 'none';
   }
-
-  mostrarInput();
 }
 
-function mostrarInput(){
+function mostrarInput(formulario){
   if(formulario.style.display === 'none'){
     formulario.style.display = 'block'
   } else {
@@ -33,11 +37,42 @@ function mostrarInput(){
   }
 }
 
+const taxaBasal = [];
+
+const inputIdade = document.getElementById('input-idade');
+const inputAltura = document.getElementById('input-altura');
+const inputPeso = document.getElementById('input-peso');
+const buttonTaxaBasal = document.getElementById('buttonTaxaBasal');
+
+buttonTaxaBasal.addEventListener('click', () => {
+  adicionaBancoDeDadosTaxaBasal();
+  calcularTaxa(inputIdade, inputAltura, inputPeso);
+  mostrarInput(formulario);
+
+})
+
+function adicionaBancoDeDadosTaxaBasal(){
+  const idade = inputIdade.value; 
+  const altura = inputAltura.value;
+  const peso = inputPeso.value;
+  taxaBasal.push(idade, altura, peso);
+}
+
+function calcularTaxa(idade, altura, peso){
+  //Separar Array
+  const idadeNovo = Number(idade.value);
+  const alturaNovo = Number(altura.value);
+  const pesoNovo = Number(peso.value);
+  
+  const resultado = parseInt(65.5 + (pesoNovo * 14.5) + (alturaNovo * 5) - (idadeNovo * 6.5));
+}
+
+
 //Inputs para guardar no banco de dados
 
-const input1 = [];
-const input2 = [];
-const input3 = [];
+const input13 = [];
+const input23 = [];
+const input33 = [];
 
 const inputDiet = document.getElementById('input-diet');
 const inputFood = document.getElementById('input-food');
@@ -49,10 +84,4 @@ buttonInputs.addEventListener('click', (event) => {
   const food = inputFood.value;
   const workout = inputWorkout.value;
 
-  input1.push(diet);
-  input2.push(food);
-  input3.push(workout);
-
-  console.log(input1);
-  console.log(input2);
 })

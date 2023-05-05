@@ -26,8 +26,39 @@
         e personalize-a de acordo com o seu gosto.</p>
       </div>
       <div class="button-container">
-        <button style="display: block" id="main-button" class="main-button" type="button" onclick="hideElement()">Fazer planilha</button>
+        <button style="display: block" id="main-button" class="main-button" type="button">Fazer planilha</button>
       </div>
+
+      <div id="taxaMetabolicaBasal" style="display: none;">
+        <div class="taxa-container">
+          <div class="main-text">
+            <h4>Para que o Birl funcione corretamente as informações precisam ser escritas
+              da maneira indicada dentro das caixas abaixo:
+            </h4>
+          </div>
+          <form id="basal-form" class="basal-form">
+            
+            <div class="basal-form-control">
+              <label for="idade">1- Qual a sua idade?</label>
+              <input id="input-idade" type="number" placeholder="Informe a sua idade">
+              <small>Lembre-se de escrever de acordo com os passos indicados acima.</small>
+            </div>
+            <div class="basal-form-control">
+              <label for="altura">2- Qual a sua altura?</label>
+              <input id="input-altura" type="number" placeholder="Informe a sua altura">
+              <small>Lembre-se de escrever de acordo com os passos indicados acima.</small>
+            </div>
+            <div class="basal-form-control">
+              <label for="peso">3- Qual o seu peso atual?</label>
+              <input id="input-peso" type="number" placeholder="Informe o seu peso">
+              <small>Lembre-se de escrever de acordo com os passos indicados acima.</small>
+            </div>
+            <button type="button" id="buttonTaxaBasal">Calcular Taxa Metabólica Basal</button>
+            
+          </form>
+        </div>
+      </div>
+
       <div id="formulario" style="display: none;">
         <div class="container">
           <div class="header">
